@@ -1,0 +1,124 @@
+/* Container */
+.expense-list {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title */
+.expense-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Table */
+.expense-list table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Header */
+.expense-list th {
+  background-color: #4f46e5;
+  color: white;
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+}
+
+/* Rows */
+.expense-list td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Zebra striping */
+.expense-list tr:nth-child(even) {
+  background-color: #f3f4f6;
+}
+
+/* Hover effect */
+.expense-list tr:hover {
+  background-color: #e0e7ff;
+  transition: 0.3s;
+}
+
+/* Buttons */
+.expense-list button {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+/* Edit button */
+.expense-list button:first-child {
+  background-color: #22c55e;
+  color: white;
+}
+
+.expense-list button:first-child:hover {
+  background-color: #16a34a;
+}
+
+/* Delete button */
+.expense-list button:last-child {
+  background-color: #ef4444;
+  color: white;
+}
+
+.expense-list button:last-child:hover {
+  background-color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .expense-list table,
+  .expense-list thead,
+  .expense-list tbody,
+  .expense-list th,
+  .expense-list td,
+  .expense-list tr {
+    display: block;
+  }
+
+  .expense-list tr {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background: white;
+    padding: 10px;
+  }
+
+  .expense-list td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .expense-list td::before {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    font-weight: bold;
+    color: #555;
+  }
+
+  .expense-list td:nth-of-type(1)::before { content: "Amount"; }
+  .expense-list td:nth-of-type(2)::before { content: "Category"; }
+  .expense-list td:nth-of-type(3)::before { content: "Description"; }
+  .expense-list td:nth-of-type(4)::before { content: "Date"; }
+  .expense-list td:nth-of-type(5)::before { content: "Action"; }
+}
